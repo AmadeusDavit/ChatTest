@@ -9,8 +9,8 @@ namespace ChatClient.Entities
 {
     public class Messege
     {
-        private string Text { get; set; }
-        private string Sender { get; set; }
+        public string Text { get; set; }
+        public string Sender { get; set; }
 
         public override string ToString()
         {

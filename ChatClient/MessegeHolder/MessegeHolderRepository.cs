@@ -32,7 +32,8 @@ namespace ChatClient.MessegeHolder
 
         public async Task PostMessegeAsync(Messege messege)
         {
-            await client.PostAsync<Messege>(requestURL, messege, new JsonMediaTypeFormatter());
+            HttpResponseMessage response = await client.PostAsync<Messege>("https://localhost:7034/chat/submitmessage", messege, new JsonMediaTypeFormatter());
+            response.EnsureSuccessStatusCode();
         }
     }
 }

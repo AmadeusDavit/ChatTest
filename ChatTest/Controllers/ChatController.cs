@@ -21,7 +21,7 @@ namespace ChatTest.Controllers
             return Ok(await repo.GetAllMessegesAsync());
         }
 
-        [HttpPost]
+        [HttpPost("submitmessage")]
         public IActionResult PostMessege(MessegeEntity messege)
         {
             var messegeEntity = new MessegeEntity
